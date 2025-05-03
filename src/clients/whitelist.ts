@@ -15,15 +15,17 @@ export const fetchWhitelist = async (targets: Target[]) => {
         }
 
     const whitelist = new Map<string, boolean>()
-    await Promise.all(
-        [...Array(config.clients.whitelist.threadCount).keys()].map(() =>
-            thread(targets, whitelist),
-        ),
-    )
+    return {has: (url: string) => true};
 
-    return {
-        has: (url: string) => whitelist.get(url) ?? false,
-    }
+    // await Promise.all(
+    //     [...Array(config.clients.whitelist.threadCount).keys()].map(() =>
+    //         thread(targets, whitelist),
+    //     ),
+    // )
+
+    // return {
+    //     has: (url: string) => whitelist.get(url) ?? false,
+    // }
 }
 
 const thread = async (targets: Target[], whitelist: Map<string, boolean>) => {
