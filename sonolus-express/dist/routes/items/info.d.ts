@@ -1,0 +1,11 @@
+import { ItemModel } from '../../models/items/item';
+import { ServerFormsModel } from '../../models/server/forms/form';
+import { ServerItemInfoModel } from '../../models/server/items/info';
+import { ServerOptionsModel } from '../../models/server/options/option';
+import { SonolusBase } from '../../sonolus/base';
+import { SonolusItemGroup } from '../../sonolus/itemGroup';
+import { SonolusCtx } from '../ctx';
+import { HandlerResponse, SonolusRouteHandler } from '../handler';
+export type ServerItemInfoHandler<TConfigurationOptions extends ServerOptionsModel, TCreates extends ServerFormsModel, TSearches extends ServerFormsModel> = (ctx: SonolusCtx<TConfigurationOptions>) => HandlerResponse<ServerItemInfoModel<TCreates, TSearches>, 401>;
+export declare const createDefaultServerItemInfoHandler: <TConfigurationOptions extends ServerOptionsModel, TItemModel extends ItemModel, TCreates extends ServerFormsModel, TSearches extends ServerFormsModel, TActions extends ServerFormsModel, TCommunityActions extends ServerFormsModel, TCommunityCommentActions extends ServerFormsModel>(sonolus: SonolusBase, group: SonolusItemGroup<TConfigurationOptions, TItemModel, TCreates, TSearches, TActions, TCommunityActions, TCommunityCommentActions>) => ServerItemInfoHandler<TConfigurationOptions, TCreates, TSearches>;
+export declare const createServerItemInfoRouteHandler: <TConfigurationOptions extends ServerOptionsModel, TItemModel extends ItemModel, TCreates extends ServerFormsModel, TSearches extends ServerFormsModel, TActions extends ServerFormsModel, TCommunityActions extends ServerFormsModel, TCommunityCommentActions extends ServerFormsModel>(sonolus: SonolusBase, group: SonolusItemGroup<TConfigurationOptions, TItemModel, TCreates, TSearches, TActions, TCommunityActions, TCommunityCommentActions>) => SonolusRouteHandler<TConfigurationOptions>;
