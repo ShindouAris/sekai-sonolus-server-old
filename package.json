@@ -8,12 +8,12 @@
     "check-type": "tsc -p . --noEmit",
     "check-lint": "eslint .",
     "check-format": "prettier . --check",
-    "build": "tsc -p ."
+    "build": "tsc -b ."
   },
   "dependencies": {
     "@sinclair/typebox": "^0.34.33",
-    "@sonolus/core": "~7.13.0",
-    "@sonolus/express": "~7.3.4",
+    "@sonolus/core": "file:./sonolus-core",
+    "@sonolus/express": "file:./sonolus-express",
     "@sonolus/free-pack": "~1.1.7",
     "express": "^4.21.2",
     "sonolus-pjsekai-engine": "~1.8.4",

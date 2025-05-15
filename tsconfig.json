@@ -11,5 +11,17 @@
     "noUncheckedIndexedAccess": true,
     "outDir": "./dist",
     "rootDir": "./src",
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "sonolus-express"
+  ],
+  "references": [
+    { "path": "./sonolus-core"},
+    { "path": "./sonolus-express"}
+  ]
 }

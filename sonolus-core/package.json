@@ -1,0 +1,32 @@
+{
+  "name": "@sonolus/core",
+  "version": "7.13.1",
+  "description": "Core library for Sonolus",
+  "author": "NonSpicyBurrito",
+  "repository": "github:Sonolus/sonolus-core",
+  "license": "MIT",
+  "keywords": [
+    "Sonolus"
+  ],
+  "main": "dist/index.node",
+  "browser": "dist/index.browser",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "check-type": "tsc -p . --noEmit",
+    "check-lint": "eslint .",
+    "check-format": "prettier . --check",
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@types/node": "^20.17.28",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "^8.28.0"
+  }
+}
